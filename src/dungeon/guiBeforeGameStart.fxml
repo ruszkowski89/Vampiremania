@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dungeon.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Pane prefHeight="404.0" prefWidth="640.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <TextField fx:id="playerName" layoutX="222.0" layoutY="160.0" prefHeight="27.0" prefWidth="197.0" promptText="Enter name of your hero:" />
+                  <TextField editable="false" layoutX="129.0" layoutY="265.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: LIGHTBLUE;" text="Choose difficulty:" />
+                  <Button fx:id="startButton" contentDisplay="CENTER" layoutX="247.0" layoutY="329.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="START" textAlignment="JUSTIFY" />
+                  <TextField alignment="CENTER" layoutX="129.0" layoutY="14.0" prefHeight="71.0" prefWidth="382.0" style="-fx-background-color: #ff4f4f; -fx-border-color: black;" text="VAMPIREMANIA">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="37.0" />
+                     </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </TextField>
+                  <TextField editable="false" layoutX="129.0" layoutY="213.0" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: LIGHTBLUE;" text="Choose map size:" />
+                  <SplitMenuButton fx:id="difficulty" layoutX="247.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Difficulty">
+                    <items>
+                      <MenuItem fx:id="easy" mnemonicParsing="false" text="Easy" />
+                      <MenuItem fx:id="medium" mnemonicParsing="false" text="Medium" />
+                        <MenuItem fx:id="hard" mnemonicParsing="false" text="Hard" />
+                    </items>
+                  </SplitMenuButton>
+                  <Slider fx:id="mapSize" layoutX="247.0" layoutY="209.0" min="4.0" prefHeight="32.0" prefWidth="138.0" showTickLabels="true" />
+               </children>
+            </Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
